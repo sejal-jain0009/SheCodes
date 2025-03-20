@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reserve at Ochoco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <a href="#" onclick="loadfeatures()">FEATURES</a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('mountain.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .col-md-6{
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        .col-md-6 h2 {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 0;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar d-flex justify-content-between">
+        <div>
+            <a href="#home">HOME</a>
+            <a href="#floor-plans">FLOOR PLANS</a>
+            <a href="#features">FEATURES</a>
+        </div>
+        <div>
+            <span>📍 PRINEVILLE, OREGON</span>
+        </div>
+    </nav>
+    <header class="text-center p-4">
+        <!-- <h1>The Reserve at Ochoco</h1> -->
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2>The Reserve at Ochoco</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-container">
+                        <h4>Join Our Waiting List</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input class="form-control" placeholder="What Are You Interested In?" required>
+                            </input>
+                            </div>
+                            <button class="btn btn-primary w-100">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<br>
+<br>
+<br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .image-section {
+            flex: 1;
+            background: url('your-image-url.jpg') center/cover no-repeat;
+            background: url('your-second-image.jpg') center/cover no-repeat;
+            background: url('your-third-image.jpg') center/cover no-repeat;
+        }
+        .text-section {
+            flex: 1;
+            background: #c49a6c;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .text-section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section" id="imageSection"></div>
+        <div class="text-section">
+            <h1 id="title">BUILDING FEATURES</h1>
+            <h3 id="subtitle">24 HOUR FITNESS</h3>
+            <p id="description">Our 24-hour fitness center is right at your doorstep! Get fit, stay healthy, and enjoy the convenience of working out whenever you want. Your dream apartment community just got even better!</p>
+            <div class="buttons">
+                <button class="btn" onclick="prevSlide()">&#8592;</button>
+                <button class="btn" onclick="nextSlide()">&#8594;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const slides = [
+            {
+                image: 'your-image-url.jpg',
+                title: 'BUILDING FEATURES',
+                subtitle: 'DOG PARK',
+                description: 'Our pet-friendly apartment community features a fantastic dog park where tour furry friends can run wild and make new pals!'
+            },
+            {
+                image: 'your-second-image.jpg',
+                title: 'BUILDING FEATURES',
+                subtitle: 'GATED COMMUNTIY',
+                description: 'Experience the epitome of luxury living in our exclusive gated aparartment community. With unparalleled security and thoughtfully designed spaces, your comfort and peace of mind are our top priorities.'
+            },
+            {
+                image: 'your-third-image.jpg',
+                title: 'BUILDING FEATURES',
+                subtitle: 'FIRE PIT LOUNGES',
+                description: 'Unwind and connect under the stars at our apartment community inviting fire pit lounges. Enjoy cozy evenings filled with warmth and camaraderie creating cherished memories with friends and neighbors.'
+            },
+        ];
+        let currentSlide = 0;
+        function updateSlide() {
+            document.getElementById('imageSection').style.backgroundImage = `url(${slides[currentSlide].image})`;
+            document.getElementById('title').innerText = slides[currentSlide].title;
+            document.getElementById('subtitle').innerText = slides[currentSlide].subtitle;
+            document.getElementById('description').innerText = slides[currentSlide].description;
+        }
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+        updateSlide();
+    </script>
+</body>
+</html>
